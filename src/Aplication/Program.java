@@ -2,39 +2,46 @@ package Aplication;
 
 import java.util.Scanner;
 
-import Entities.Triangle;
+import Entities.Product;
 
 public class Program {
 
 	public static void main(String[] args) {
-		Triangle x, y;
-
 		Scanner sc = new Scanner(System.in);
-
-		x = new Triangle();
-		y = new Triangle();
-
-		System.out.println("Entre com os valores do tringulo x");
-		x.a = sc.nextDouble();
-		x.b = sc.nextDouble();
-		x.c = sc.nextDouble();
-
-
-		System.out.println("Entre com os valores do tringulo y");
-		y.a = sc.nextDouble();
-		y.b = sc.nextDouble();
-		y.c = sc.nextDouble();
-
-		x.area();
-		y.area();
-		System.out.println(x.area());
-		System.out.println(y.area());
+		Product x;
 		
 		
-		if (x.area() > y.area()) {
-			System.out.println("X é maior");
-		}else {
-			System.out.println("Y é maior");}
+		x= new Product();
+		
+		System.out.println("Digite as informações do Produto");
+		System.out.println("Digite o nome");
+		x.name = sc.next();
+		System.out.println("Quanto vale cada unidade");
+		x.price = sc.nextDouble();
+		System.out.println("Quantidade em Estoque");
+		x.quantity = sc.nextInt();
+		
+		x.MostrarProduto();
+		x.AddProducts(5);
+		x.MostrarProduto();
+		
+		/*System.out.println("Entre com os valores, 1 para adicionar produtos, 2 lançar saida e 3 para sair");
+		int a = sc.nextInt();
+		switch (a) {
+		case 1:
+			x.AddProducts();
+			System.out.println("Produto adicionado com sucesso!");
+			System.out.println("-------------------------------");
+			x.MostrarProduto();
+			break;
+		case 2:
+			x.RemoveProducts();
+			System.out.println("Produto adicionado com sucesso!");
+			System.out.println("-------------------------------");
+			x.MostrarProduto();
+			break;
+		
+		}*/
 		sc.close();
 	}
 
