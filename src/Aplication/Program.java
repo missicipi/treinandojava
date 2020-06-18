@@ -10,7 +10,7 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		Product x;
 		
-		
+		int quantity;
 		x= new Product();
 		
 		System.out.println("Digite as informações do Produto");
@@ -22,6 +22,25 @@ public class Program {
 		x.quantity = sc.nextInt();
 		
 		System.out.println(x.ToString());
+		
+		System.out.println();
+		System.out.println("Entre com a quantidade, que você deseja add no estoque: ");
+		System.out.println();
+		quantity =sc.nextInt();
+		x.AddProducts(quantity);
+
+		System.out.println(x.ToString());
+		
+		System.out.println();
+		System.out.println("Entre com a quantidade, que você deseja remove do estoque: ");
+		System.out.println();
+		quantity =sc.nextInt();
+		x.RemoveProducts(quantity);
+
+		System.out.println(x.ToString());
+		
+		
+		
 		
 		/*
 		 * 
