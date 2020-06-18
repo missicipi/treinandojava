@@ -21,11 +21,17 @@ public class Program {
 		System.out.println("Quantidade em Estoque");
 		x.quantity = sc.nextInt();
 		
+		System.out.println(x.ToString());
+		
+		/*
+		 * 
 		x.MostrarProduto();
 		x.AddProducts(5);
 		x.MostrarProduto();
-		
-		/*System.out.println("Entre com os valores, 1 para adicionar produtos, 2 lançar saida e 3 para sair");
+		 * 
+		 * 
+		 * 
+		 * System.out.println("Entre com os valores, 1 para adicionar produtos, 2 lançar saida e 3 para sair");
 		int a = sc.nextInt();
 		switch (a) {
 		case 1:
